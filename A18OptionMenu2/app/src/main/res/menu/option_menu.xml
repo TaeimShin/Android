@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/optmenu_1"
+        android:title="옵션메뉴1[xml]"
+        android:icon="@drawable/away"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/optmenu_2"
+        android:title="옵션메뉴2[xml]"
+        android:icon="@drawable/busy"
+        android:orderInCategory="2"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/optmenu_3"
+        android:title="옵션메뉴3[xml]"
+        android:icon="@drawable/offline"
+        android:orderInCategory="3"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/bg_red"
+        android:title="red"
+        android:orderInCategory="4" />
+    <item
+        android:id="@+id/bg_green"
+        android:title="green"
+        android:orderInCategory="5" />
+    <item
+        android:id="@+id/bg_blue"
+        android:title="blue"
+        android:orderInCategory="6" />
+    <item
+        android:id="@+id/sub_menu"
+        android:title="이미지변환"
+        android:orderInCategory="7" >
+        <menu>
+            <item
+                android:id="@+id/image_rotation"
+                android:title="90도회전"
+                ></item>
+            <item
+                android:id="@+id/image_scale_inc"
+                android:title="2배확대" />
+            <item
+                android:id="@+id/image_scale_desc"
+                android:title="2배축소" />
+        </menu>
+    </item>
+</menu>
