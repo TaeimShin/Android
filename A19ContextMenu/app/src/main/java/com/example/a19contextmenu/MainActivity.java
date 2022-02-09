@@ -53,9 +53,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }////onCreate메소드끝
 
+    //컨텍스트 메뉴를 전개하기위한 메서드 오버라이딩
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
 
+        /*
+        리소스 폴더 하위에 menu폴더를 생성한 후 각 메뉴를 담당할 xml파일을 작성하고
+        클릭된 메뉴에 따라 inflate한다.
+         */
         MenuInflater menuInflater = getMenuInflater();
         if(v.getId()==R.id.btn_background) {
             menu.setHeaderTitle("배경색 변경하기");
@@ -71,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreateContextMenu(menu, v, menuInfo);
     }////onCreateContextMenu메소드끝
 
+    //컨텍스트 메뉴를 클릭했을때 이벤트 처리용 메서드 오버라이딩
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         switch(item.getItemId())
