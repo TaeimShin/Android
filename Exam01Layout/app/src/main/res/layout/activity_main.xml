@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.kosmo.exam01layout.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    >
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="20sp"
+            android:text="▶TableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TableLayout
+            android:background="#a99aff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:padding="10dp"
+            >
+            <TableRow>
+                <TextView
+                    android:layout_height="50dp"
+                    android:text="이 름"
+                    android:textSize="15sp"/>
+                <EditText
+                    android:layout_span="3"
+                    android:layout_height="50dp"
+                    android:hint="이름을 입력하세요"
+                    />
+            </TableRow>
+            <TableRow>
+                <Button
+                    android:text="확인"
+                    android:layout_column="2"
+                    />
+                <Button android:text="취소"/>
+            </TableRow>
+        </TableLayout>
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="20sp"
+            android:text="▶LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#00ff00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_height="50dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="이 름"
+                    android:textSize="15sp"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="9"
+                    android:layout_height="50dp"
+                    android:hint="이름을 입력하세요"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                >
+                <Button
+                    android:text="확인"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+                <Button
+                    android:text="취소"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="20sp"
+            android:text="▶GridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <GridLayout
+            android:padding="10dp"
+            android:rowCount="2"
+            android:columnCount="10"
+            android:background="#999999"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_height="50dp"
+                android:text="이 름"
+                android:gravity="center"
+                android:textSize="15sp"/>
+            <EditText
+                android:layout_columnSpan="9"
+                android:layout_gravity="fill"
+                android:layout_height="50dp"
+                android:hint="이름을 입력하세요"
+                />
+            <Button
+                android:layout_column="8"
+                android:text="확인"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <Button
+                android:layout_column="9"
+                android:text="취소"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </GridLayout>
+        <TextView
+            android:textColor="#ff0000"
+            android:textSize="20sp"
+            android:text="▶RelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:background="#778899"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="이 름"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:id="@+id/textview"
+                />
+            <EditText
+                android:id="@+id/editext"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="이름을 입력하세요"
+                android:layout_toRightOf="@id/textview"
+                android:layout_alignTop="@id/textview"
+                />
+
+            <Button
+                android:text="취소"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editext"
+                android:layout_alignRight="@id/editext"
+                android:id="@+id/cancel"
+                />
+            <Button
+                android:text="확인"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/cancel"
+                android:layout_alignBaseline="@id/cancel"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
